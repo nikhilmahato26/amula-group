@@ -2,6 +2,7 @@ import React from 'react';
 import { SEO } from '../components/SEO';
 import { Hero } from '../components/Hero';
 import { JobSearch } from '../components/JobSearch';
+import { OverseasRecruitment } from '../components/OverseasRecruitment';
 import { JobConsultancy } from '../components/JobConsultancy';
 import { JobCategories } from '../components/JobCategories';
 import { HowItWorks } from '../components/HowItWorks';
@@ -25,10 +26,13 @@ export const Home: React.FC = () => {
       {/* 2. Job Search / Quick Profile Submission Box */}
       <JobSearch />
 
-      {/* 3. Job Consultancy Services */}
+      {/* 3. Overseas Recruitment (Zero Advance Payment, 14+ Countries & In-Demand Roles) */}
+      <OverseasRecruitment />
+
+      {/* 4. Job Consultancy Services */}
       <JobConsultancy />
 
-      {/* 4. Job Categories Grid */}
+      {/* 5. Job Categories Grid */}
       <JobCategories />
 
       {/* 5. How It Works 4-Step Process */}
