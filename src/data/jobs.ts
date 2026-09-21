@@ -149,5 +149,134 @@ export const SAMPLE_JOBS: JobListing[] = [
       "Fluency in Telugu, Hindi, and basic English"
     ],
     postedDate: "Recent"
+  },
+  {
+    id: "job-10",
+    title: "Overseas Electrician (Commercial & Residential)",
+    category: "Skilled Jobs",
+    location: "Dubai, UAE",
+    type: "Full-Time",
+    experience: "1-4 Years",
+    isInternational: true,
+    description: "Electrical installations, conduit wiring, distribution boards, and routine site maintenance. Zero advance payment required.",
+    requirements: [
+      "ITI / Diploma in Electrical Trade or equivalent experience",
+      "Knowledge of electrical wiring, circuit testing, and safety protocols",
+      "Passport ready with international travel clearance"
+    ],
+    postedDate: "Recent"
+  },
+  {
+    id: "job-11",
+    title: "Plumber & Sanitary Specialist",
+    category: "Skilled Jobs",
+    location: "Kuwait / Qatar",
+    type: "Full-Time",
+    experience: "1-3 Years",
+    isInternational: true,
+    description: "Installation and repair of plumbing fixtures, water supply piping, drainage systems, and maintenance for building complexes.",
+    requirements: [
+      "Proven plumbing craftsmanship and tool handling",
+      "Pipe fitting, leakage testing, and drainage layout knowledge",
+      "Hardworking and safety-conscious attitude"
+    ],
+    postedDate: "Recent"
+  },
+  {
+    id: "job-12",
+    title: "Light Vehicle Car Driver / Chauffeur",
+    category: "Driving & Transport",
+    location: "Dubai, UAE",
+    type: "Full-Time",
+    experience: "2-5 Years",
+    isInternational: true,
+    description: "Chauffeur and car driving for passenger transit, airport pick-ups, and corporate guest mobility. Clean driving record required.",
+    requirements: [
+      "Valid Indian or GCC Driving License (LMV)",
+      "Good road sense, punctuality, and basic GPS navigation skills",
+      "Polite customer handling and vehicle maintenance awareness"
+    ],
+    postedDate: "Recent"
+  },
+  {
+    id: "job-13",
+    title: "Bike Delivery Rider",
+    category: "Driving & Transport",
+    location: "Qatar / Dubai",
+    type: "Full-Time",
+    experience: "1-3 Years",
+    isInternational: true,
+    description: "Fast-paced food delivery and courier dispatch using company two-wheelers. Dynamic route management with competitive incentives.",
+    requirements: [
+      "Valid two-wheeler driving license",
+      "Smartphone familiarity for delivery app navigation",
+      "Punctual and customer-friendly demeanor"
+    ],
+    postedDate: "Recent"
+  },
+  {
+    id: "job-14",
+    title: "Company Executive Driver",
+    category: "Driving & Transport",
+    location: "Bahrain / Saudi Arabia",
+    type: "Full-Time",
+    experience: "2-4 Years",
+    isInternational: true,
+    description: "Corporate chauffeur driving company vans, sedans, and staff shuttles with high standards of punctuality and road safety.",
+    requirements: [
+      "Valid driving license with verified commercial experience",
+      "Basic English or Hindi communication",
+      "Professional corporate etiquette"
+    ],
+    postedDate: "Recent"
+  },
+  {
+    id: "job-15",
+    title: "House Driver (Private Household)",
+    category: "Driving & Transport",
+    location: "Saudi Arabia / Kuwait",
+    type: "Full-Time",
+    experience: "2-5 Years",
+    isInternational: true,
+    description: "Personal and family chauffeur for private residence. Responsible for family transit, school errands, and vehicle upkeep.",
+    requirements: [
+      "Valid Indian or GCC driving license",
+      "Trustworthy, disciplined, and patient temperament",
+      "Clean background check and valid passport"
+    ],
+    postedDate: "Recent"
+  },
+  {
+    id: "job-16",
+    title: "Hotel Management & Front Office Staff",
+    category: "Hospitality",
+    location: "Maldives / Malta",
+    type: "Full-Time",
+    experience: "1-4 Years",
+    isInternational: true,
+    description: "Front desk reception, guest welcoming, concierge services, and resort management for luxury hospitality properties.",
+    requirements: [
+      "Diploma or Degree in Hotel Management / Hospitality",
+      "Good conversational English skills",
+      "Pleasing personality and guest-first mindset"
+    ],
+    postedDate: "Recent"
+  },
+  {
+    id: "job-17",
+    title: "Restaurant Chef, Cook & Service Staff",
+    category: "Hospitality",
+    location: "Germany / France / Dubai",
+    type: "Full-Time",
+    experience: "1-3 Years",
+    isInternational: true,
+    description: "Culinary preparation, kitchen assistance, and restaurant dining service across high-traffic dining establishments.",
+    requirements: [
+      "Experience in commercial kitchen operations or food service",
+      "Knowledge of kitchen hygiene and food safety standards",
+      "Team player with high energy during peak service hours"
+    ],
+    postedDate: "Recent"
   }
 ];
+

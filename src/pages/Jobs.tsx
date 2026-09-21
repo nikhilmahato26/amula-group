@@ -22,7 +22,20 @@ export const Jobs: React.FC = () => {
   const [candidateResume, setCandidateResume] = useState<File | null>(null);
   const [isSuccessSubmitted, setIsSuccessSubmitted] = useState(false);
 
-  const locations = ['All', 'Hyderabad', 'Dubai', 'Nizamabad', 'Basar'];
+  const locations = [
+    'All',
+    'Dubai',
+    'Saudi Arabia',
+    'Qatar',
+    'Kuwait',
+    'Bahrain',
+    'Oman',
+    'Maldives',
+    'Europe (Germany / France / Malta)',
+    'Hyderabad',
+    'Nizamabad',
+    'Basar',
+  ];
 
   const filteredJobs = useMemo(() => {
     return SAMPLE_JOBS.filter((job) => {
@@ -37,7 +50,15 @@ export const Jobs: React.FC = () => {
 
       const matchesLocation = 
         selectedLocation === 'All' || 
-        job.location.toLowerCase().includes(selectedLocation.toLowerCase());
+        job.location.toLowerCase().includes(selectedLocation.toLowerCase()) ||
+        (selectedLocation.includes('Europe') && (
+          job.location.toLowerCase().includes('germany') ||
+          job.location.toLowerCase().includes('france') ||
+          job.location.toLowerCase().includes('malta') ||
+          job.location.toLowerCase().includes('moldova') ||
+          job.location.toLowerCase().includes('russia') ||
+          job.location.toLowerCase().includes('ukraine')
+        ));
 
       return matchesSearch && matchesCategory && matchesLocation;
     });

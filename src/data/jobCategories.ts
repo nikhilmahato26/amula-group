@@ -60,6 +60,13 @@ export const JOB_CATEGORIES: JobCategory[] = [
     isPopular: true,
   },
   {
+    id: "driving-transport",
+    title: "Driving & Transport",
+    description: "Car drivers, bike delivery riders, company chauffeurs, and domestic house drivers.",
+    iconName: "Briefcase",
+    isPopular: true,
+  },
+  {
     id: "overseas-jobs",
     title: "Overseas Jobs",
     description: "International job openings across the Gulf, Middle East, and global markets.",
