@@ -50,43 +50,57 @@ export const JobCategories: React.FC = () => {
         </div>
 
         {/* Categories Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {JOB_CATEGORIES.map((category, index) => (
             <motion.div
               key={category.id}
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
+              transition={{ duration: 0.4, delay: index * 0.04 }}
             >
               <Link
                 to={`/jobs?category=${encodeURIComponent(category.title)}`}
-                className="h-full bg-white rounded-xl p-5 border border-surface-border hover:border-gold-500/50 hover:shadow-premium-hover transition-all duration-300 flex flex-col justify-between group block"
+                className="h-full bg-white rounded-2xl overflow-hidden border border-surface-border hover:border-gold-500/50 hover:shadow-premium-hover transition-all duration-300 flex flex-col justify-between group block"
               >
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-lg bg-gold-500/10 text-gold-700 flex items-center justify-center group-hover:bg-gold-gradient group-hover:text-dark-950 transition-all duration-300">
-                      {categoryIcons[category.iconName] || <Briefcase className="w-6 h-6" />}
-                    </div>
-                    {category.isPopular && (
-                      <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-gold-100 text-gold-800 border border-gold-300">
-                        In Demand
-                      </span>
-                    )}
+                {/* Category Image Banner */}
+                <div className="relative h-40 w-full overflow-hidden bg-neutral-900">
+                  <img
+                    src={category.image}
+                    alt={category.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+
+                  {/* Floating Icon */}
+                  <div className="absolute top-3 left-3 w-10 h-10 rounded-xl bg-white/90 backdrop-blur-md text-gold-700 flex items-center justify-center shadow-md group-hover:bg-gold-gradient group-hover:text-dark-950 transition-all duration-300">
+                    {categoryIcons[category.iconName] || <Briefcase className="w-5 h-5" />}
                   </div>
 
-                  <h3 className="text-base font-display font-bold text-dark-950 group-hover:text-gold-700 transition-colors mb-2">
-                    {category.title}
-                  </h3>
+                  {category.isPopular && (
+                    <span className="absolute top-3 right-3 text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full bg-gold-500 text-dark-950 shadow-md">
+                      In Demand
+                    </span>
+                  )}
 
-                  <p className="text-xs text-neutral-500 line-clamp-2 leading-relaxed">
-                    {category.description}
-                  </p>
+                  <div className="absolute bottom-3 left-3 right-3">
+                    <h3 className="text-lg font-display font-bold text-white group-hover:text-gold-300 transition-colors drop-shadow-sm">
+                      {category.title}
+                    </h3>
+                  </div>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-neutral-100 flex items-center justify-between text-xs font-semibold text-neutral-600 group-hover:text-dark-900">
-                  <span>Explore Openings</span>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-gold-600 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                {/* Card Content */}
+                <div className="p-5 flex-1 flex flex-col justify-between">
+                  <p className="text-xs text-neutral-600 line-clamp-2 leading-relaxed mb-4">
+                    {category.description}
+                  </p>
+
+                  <div className="pt-3 border-t border-neutral-100 flex items-center justify-between text-xs font-semibold text-neutral-600 group-hover:text-dark-900">
+                    <span>Explore Openings</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-gold-600 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </div>
                 </div>
               </Link>
             </motion.div>
